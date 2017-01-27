@@ -3,7 +3,6 @@
 
 #include "messages.h"
 
-typedef unsigned int ALuint;
 typedef struct edit_change EDIT_CHANGE;
 
 #define MAX_GROUP_PEERS 256
@@ -31,8 +30,8 @@ typedef struct groupchat {
 
     GNOTIFY_TYPE notify;
 
-    bool   muted;
-    ALuint audio_dest;
+    bool     muted;
+    unsigned audio_dest;
 
     char     name[128];
     uint16_t name_length;

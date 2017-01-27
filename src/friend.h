@@ -9,7 +9,6 @@
 typedef struct edit_change EDIT_CHANGE;
 typedef struct file_transfer FILE_TRANSFER;
 typedef uint8_t *UTOX_IMAGE;
-typedef unsigned int ALuint;
 
 typedef struct friend_meta_data {
     uint8_t version;
@@ -71,7 +70,7 @@ typedef struct utox_friend {
     /* Audio / Video */
     int32_t  call_state_self, call_state_friend;
     uint16_t video_width, video_height;
-    ALuint   audio_dest;
+    unsigned audio_dest;
 
     /* File transfers */
     bool     ft_autoaccept;
