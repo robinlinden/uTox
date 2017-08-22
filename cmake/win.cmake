@@ -16,4 +16,7 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DAL_LIBTYPE_STATIC")
 set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -g3" CACHE STRING "" FORCE)
 set(CMAKE_C_FLAGS_RELWITHDEBINFO "${CMAKE_C_FLAGS_RELWITHDEBINFO} -g3" CACHE STRING "" FORCE)
 
-set(WIN_LIBS_DIR libs/windows-x64)
+# Default folder for dependencies on this system.
+if(NOT CMAKE_PREFIX_PATH)
+    set(CMAKE_PREFIX_PATH libs/windows-x64/)
+endif()

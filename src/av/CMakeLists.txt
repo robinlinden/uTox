@@ -7,17 +7,15 @@ add_library(utoxAV STATIC
     filter_audio.c
     )
 
+find_package(libopus REQUIRED)
+include_directories(${LIBOPUS_INCLUDE_DIRS})
+target_link_libraries(utoxAV ${LIBOPUS_LIBRARIES})
+
 if(WIN32)
     target_link_libraries(utoxAV OpenAL32) # Windows needs to be linked against OpenAL32
-elseif(APPLE)
-    find_package(libopus REQUIRED)
-    include_directories(${LIBOPUS_INCLUDE_DIRS})
-    target_link_libraries(utoxAV ${LIBOPUS_LIBRARIES}) # Link OSX against opus
-else()
+elseif(LINUX)
     # Both openal and opus are required for the static Linux builds on Jenkins.
     find_package(libopus REQUIRED)
-    include_directories(${LIBOPUS_INCLUDE_DIRS})
-    target_link_libraries(utoxAV ${LIBOPUS_LIBRARIES})
     target_link_libraries(utoxAV openal)
 endif()
 
