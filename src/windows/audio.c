@@ -90,26 +90,9 @@ void audio_detect(void) {
         goto Exit;
     }
 
-    /* if(memcmp(&KSDATAFORMAT_SUBTYPE_PCM, &wfx->SubFormat, sizeof(wfx->SubFormat)) == 0) {
-        printf("pcm\n");
-    } else {
-        printf("unknown\n");
-    }*/
-
     hr = pAudioClient->lpVtbl->Initialize(pAudioClient, AUDCLNT_SHAREMODE_SHARED, AUDCLNT_STREAMFLAGS_LOOPBACK,
                                           hnsRequestedDuration, 0, pwfx, NULL);
     EXIT_ON_ERROR(hr)
-
-    /*AUDCLNT_STREAMFLAGS_EVENTCALLBACK
-    hEvent = CreateEvent(NULL, FALSE, FALSE, NULL);
-    if (hEvent == NULL)
-    {
-        hr = E_FAIL;
-        goto Exit;
-    }
-
-    hr = pAudioClient->lpVtbl->
-    EXIT_ON_ERROR(hr)*/
 
     // Get the size of the allocated buffer.
     hr = pAudioClient->lpVtbl->GetBufferSize(pAudioClient, &bufferFrameCount);

@@ -316,13 +316,10 @@ void sourceplaybuffer(unsigned int f, const int16_t *data, int samples, uint8_t 
                  sample_rate);
     alSourceQueueBuffers(source, 1, &bufid);
 
-    // LOG_TRACE("uTox Audio", "audio frame || samples == %i channels == %u rate == %u " , samples, channels, sample_rate);
-
     ALint state;
     alGetSourcei(source, AL_SOURCE_STATE, &state);
     if (state != AL_PLAYING) {
         alSourcePlay(source);
-        // LOG_TRACE("uTox Audio", "Starting source %u" , i);
     }
 }
 
@@ -375,30 +372,15 @@ static void audio_out_init(void) {
         return;
     }
 
-    // ALint error;
-    // alGetError(); /* clear errors */
-
-    // alGenSources((ALuint)1, &ringtone);
-    // if ((error = alGetError()) != AL_NO_ERROR) {
-    //     LOG_TRACE("uTox Audio", "Error generating source with err %x" , error);
-    //     return;
-    // }
-
-    // alGenSources((ALuint)1, &preview);
-    // if ((error = alGetError()) != AL_NO_ERROR) {
-    //     LOG_TRACE("uTox Audio", "Error generating source with err %x" , error);
-    //     return;
-    // }
-
     alcCloseDevice(audio_out_handle);
 }
 
 static bool audio_source_init(ALuint *source) {
     ALint error;
     alGetError();
-    alGenSources((ALuint)1, source);
+    alGenSources(1, source);
     if ((error = alGetError()) != AL_NO_ERROR) {
-        LOG_TRACE("uTox Audio", "Error generating source with err %x" , error);
+        LOG_ERR("uTox Audio", "Error generating source with err %x" , error);
         return false;
     }
     return true;
