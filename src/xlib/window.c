@@ -11,8 +11,8 @@
 
 #include "../ui/draw.h"
 
-#include "../layout/background.h"
-#include "../layout/notify.h"
+#include "layout/background.h"
+#include "layout/notify.h"
 
 #include "../main.h" // MAIN_WIDTH, MAIN_HEIGHT
 

@@ -10,3 +10,10 @@ add_library(utoxLAYOUT STATIC
     background.c
     tray.c
     )
+
+target_include_directories(utoxLAYOUT
+    PUBLIC
+        include
+    PRIVATE
+        include/layout
+    )

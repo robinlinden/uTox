@@ -30,10 +30,10 @@
 #include "../ui/draw.h"
 #include "../ui/edit.h"
 
-#include "../layout/background.h"
-#include "../layout/friend.h"
-#include "../layout/group.h"
-#include "../layout/settings.h"
+#include "layout/background.h"
+#include "layout/friend.h"
+#include "layout/group.h"
+#include "layout/settings.h"
 
 #include <ctype.h>
 #include <locale.h>

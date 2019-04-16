@@ -32,9 +32,9 @@
 #include <stddef.h>
 #include <stdlib.h>
 
-#include "../layout/friend.h"
-#include "../layout/group.h"
-#include "../layout/settings.h"
+#include "layout/friend.h"
+#include "layout/group.h"
+#include "layout/settings.h"
 
 extern XIC xic;
 

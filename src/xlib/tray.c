@@ -8,7 +8,7 @@
 #include "../native/image.h"
 #include "../native/ui.h"
 
-#include "../layout/tray.h"
+#include "layout/tray.h"
 
 #include <stdint.h>
 #include <stdlib.h>

@@ -90,7 +90,7 @@ static bool video_device_stop(void) {
 }
 
 #include "../ui/dropdown.h"
-#include "../layout/settings.h" // TODO move?
+#include "layout/settings.h" // TODO move?
 void utox_video_append_device(void *device, bool localized, void *name, bool default_) {
     video_device[video_device_count++] = device;
 

@@ -8,7 +8,7 @@
 #import "../ui/draw.h"
 #import "../ui/svg.h"
 
-#import "../layout/background.h"
+#import "layout/background.h"
 
 #ifdef UTOX_COCOA_BRAVE
 #define DRAW_TARGET_CHK()
@@ -351,11 +351,11 @@ void setscale_fonts(void) {
     for (int i = 0; i < sizeof(fonts) / sizeof(CTFontRef); ++i) {
         RELEASE_CHK(CFRelease, fonts[i]);
     }
-    
+
     CFStringRef reg = (CFStringRef) [NSFont systemFontOfSize:0.0].fontName;
     CFStringRef bold = (CFStringRef) [NSFont boldSystemFontOfSize:0.0].fontName;
     LOG_TRACE("OSX Drawing", "Using %s fontfamily", CFStringGetCStringPtr(reg, kCFStringEncodingUTF8));
-    
+
     fonts[FONT_TEXT] = CTFontCreateWithNameAndOptions(reg, SCALE(12.0), NULL, kCTFontOptionsDefault);
     fonts[FONT_STATUS] = CTFontCreateWithNameAndOptions(reg, SCALE(11.0), NULL, kCTFontOptionsDefault);
     fonts[FONT_LIST_NAME] = CTFontCreateWithNameAndOptions(reg, SCALE(12.0), NULL, kCTFontOptionsDefault);
@@ -364,7 +364,7 @@ void setscale_fonts(void) {
     fonts[FONT_MISC] = CTFontCreateWithNameAndOptions(bold, SCALE(10.0), NULL, kCTFontOptionsDefault);
     CFRelease(reg);
     CFRelease(bold);
-    
+
     AT_LEAST_ELCAPITAN_DO {
         font_small_lineheight = CTFontGetBoundingBox(fonts[FONT_TEXT]).size.height;
     }

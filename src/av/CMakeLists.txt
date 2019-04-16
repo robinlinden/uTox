@@ -7,6 +7,10 @@ add_library(utoxAV STATIC
     filter_audio.c
     )
 
+target_link_libraries(utoxAV
+    utoxLAYOUT
+    )
+
 if(WIN32)
     target_link_libraries(utoxAV OpenAL32) # Windows needs to be linked against OpenAL32
 elseif(APPLE)

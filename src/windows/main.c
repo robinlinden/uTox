@@ -35,10 +35,10 @@
 #include "../ui/edit.h"
 #include "../ui/svg.h"
 
-#include "../layout/background.h" // TODO do we want to remove this?
-#include "../layout/friend.h"
-#include "../layout/group.h"
-#include "../layout/settings.h" // TODO remove, in for dropdown.lang
+#include "layout/background.h" // TODO do we want to remove this?
+#include "layout/friend.h"
+#include "layout/group.h"
+#include "layout/settings.h" // TODO remove, in for dropdown.lang
 
 #include <windowsx.h>
 #include <io.h>

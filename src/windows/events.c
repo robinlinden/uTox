@@ -25,9 +25,9 @@
 #include "../ui/edit.h"
 #include "../ui/svg.h"
 
-#include "../layout/background.h"
-#include "../layout/notify.h"
-#include "../layout/settings.h"
+#include "layout/background.h"
+#include "layout/notify.h"
+#include "layout/settings.h"
 
 #include <windowsx.h>
 

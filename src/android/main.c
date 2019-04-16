@@ -17,7 +17,7 @@
 #include "../ui/svg.h"
 #include "../ui/edit.h"
 
-#include "../layout/background.h"
+#include "layout/background.h"
 
 #include "../native/keyboard.h"
 #include "../native/notify.h"

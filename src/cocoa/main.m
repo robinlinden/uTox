@@ -18,7 +18,7 @@
 
 #include "../ui/dropdown.h"
 
-#include "../layout/settings.h"
+#include "layout/settings.h"
 
 #import <AppKit/AppKit.h>
 #import <Foundation/Foundation.h>

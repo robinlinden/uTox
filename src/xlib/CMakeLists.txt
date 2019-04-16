@@ -75,6 +75,7 @@ else()
 endif()
 
 target_link_libraries(utoxNATIVE
+        utoxLAYOUT
         icon
         ${LIBV4LCONVERT_LIBRARIES}
         ${LIBFONTCONFIG_LIBRARIES}

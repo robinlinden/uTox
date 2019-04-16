@@ -28,9 +28,9 @@
 #include "../ui/edit.h"
 #include "../ui/panel.h"
 
-#include "../layout/background.h"
-#include "../layout/friend.h"
-#include "../layout/group.h"
+#include "layout/background.h"
+#include "layout/friend.h"
+#include "layout/group.h"
 
 NSCursor *cursors[8];
 bool have_focus = false;
