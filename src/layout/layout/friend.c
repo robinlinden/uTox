@@ -3,24 +3,24 @@
 #include "settings.h"
 #include "sidebar.h"
 
-#include "../avatar.h"
-#include "../debug.h"
-#include "../flist.h"
-#include "../friend.h"
-#include "../macros.h"
-#include "../settings.h"
-#include "../theme.h"
-#include "../tox.h"
+#include "../../avatar.h"
+#include "../../debug.h"
+#include "../../flist.h"
+#include "../../friend.h"
+#include "../../macros.h"
+#include "../../settings.h"
+#include "../../theme.h"
+#include "../../tox.h"
 
-#include "../native/dialog.h"
+#include "../../native/dialog.h"
 
-#include "../ui/draw.h"
-#include "../ui/edit.h"
-#include "../ui/scrollable.h"
-#include "../ui/svg.h"
-#include "../ui/text.h"
+#include "../../ui/draw.h"
+#include "../../ui/edit.h"
+#include "../../ui/scrollable.h"
+#include "../../ui/svg.h"
+#include "../../ui/text.h"
 
-#include "../main.h" // add friend status // TODO this is stupid wrong
+#include "../../main.h" // add friend status // TODO this is stupid wrong
 
 #include <string.h>
 
@@ -288,7 +288,7 @@ static void button_send_friend_request_on_mup(void) {
     edit_resetfocus();
 }
 
-#include "../tox.h"
+#include "../../tox.h"
 
 static void button_call_decline_on_mup(void) {
     FRIEND *f = flist_get_friend();
@@ -303,9 +303,9 @@ static void button_call_decline_on_mup(void) {
     }
 }
 
-#include "../av/utox_av.h"
-#include "../av/audio.h"
-#include "../ui/button.h"
+#include "../../av/utox_av.h"
+#include "../../av/audio.h"
+#include "../../ui/button.h"
 static void button_call_decline_update(BUTTON *b) {
     FRIEND *f = flist_get_friend();
     if (!f) {
@@ -371,7 +371,7 @@ static void button_call_audio_update(BUTTON *b) {
     }
 }
 
-#include "../av/video.h"
+#include "../../av/video.h"
 static void button_call_video_on_mup(void) {
     FRIEND *f = flist_get_friend();
     if (!f) {
@@ -543,7 +543,7 @@ BUTTON button_send_file = {
     .tooltip_text = {.i18nal = STR_SEND_FILE },
 };
 
-#include "../screen_grab.h"
+#include "../../screen_grab.h"
 static void button_send_screenshot_on_mup(void) {
     FRIEND *f = flist_get_friend();
     if (f != NULL && f->online) {
@@ -613,7 +613,7 @@ static void switchfxn_autoaccept_ft(void) {
     }
 }
 
-#include "../ui/switch.h"
+#include "../../ui/switch.h"
 
 UISWITCH switch_friend_autoaccept_ft = {
     .style_outer    = BM_SWITCH,
@@ -687,7 +687,7 @@ EDIT edit_add_new_friend_msg = {
     .empty_str = {.i18nal = STR_DEFAULT_FRIEND_REQUEST_MESSAGE },
 };
 
-#include "../commands.h"
+#include "../../commands.h"
 static void e_chat_msg_onenter(EDIT *edit) {
     char *   text   = edit->data;
     uint16_t length = edit->length;

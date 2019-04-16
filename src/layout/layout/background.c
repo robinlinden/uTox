@@ -6,14 +6,14 @@
 #include "settings.h"
 #include "sidebar.h"
 
-#include "../macros.h"
-#include "../theme.h"
+#include "../../macros.h"
+#include "../../theme.h"
 
-#include "../ui.h"
+#include "../../ui.h"
 
-#include "../ui/draw.h"
-#include "../ui/panel.h"
-#include "../ui/text.h"
+#include "../../ui/draw.h"
+#include "../../ui/panel.h"
+#include "../../ui/text.h"
 
 #include <stddef.h>
 

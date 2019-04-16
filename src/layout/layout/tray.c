@@ -1,12 +1,12 @@
 #include "tray.h"
 
-#include "../macros.h"
-#include "../theme.h"
+#include "../../macros.h"
+#include "../../theme.h"
 
-#include "../ui/button.h"
-#include "../ui/draw.h"
-#include "../ui/panel.h"
-#include "../ui/text.h"
+#include "../../ui/button.h"
+#include "../../ui/draw.h"
+#include "../../ui/panel.h"
+#include "../../ui/text.h"
 
 static void tray_draw(int x, int y, int w, int h) {
     drawrect(x, y, w, h, COLOR_BKGRND_MAIN);

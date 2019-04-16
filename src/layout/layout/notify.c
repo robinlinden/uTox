@@ -2,17 +2,17 @@
 
 #include "userbadge.h"
 
-#include "../avatar.h"
-#include "../debug.h"
-#include "../notify.h"
-#include "../self.h"
-#include "../theme.h"
-#include "../tox.h"
-#include "../ui.h"
+#include "../../avatar.h"
+#include "../../debug.h"
+#include "../../notify.h"
+#include "../../self.h"
+#include "../../theme.h"
+#include "../../tox.h"
+#include "../../ui.h"
 
-#include "../ui/svg.h"
-#include "../ui/draw.h"
-#include "../ui/button.h"
+#include "../../ui/svg.h"
+#include "../../ui/draw.h"
+#include "../../ui/button.h"
 
 bool btn_move_window_down;
 

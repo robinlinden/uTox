@@ -1,30 +1,30 @@
 #include "settings.h"
 
-#include "../debug.h"
-#include "../flist.h"
-#include "../macros.h"
-#include "../self.h"
-#include "../theme.h"
-#include "../tox.h"
-#include "../updater.h"
+#include "../../debug.h"
+#include "../../flist.h"
+#include "../../macros.h"
+#include "../../self.h"
+#include "../../theme.h"
+#include "../../tox.h"
+#include "../../updater.h"
 
-#include "../av/video.h"
+#include "../../av/video.h"
 
-#include "../native/clipboard.h"
-#include "../native/dialog.h"
-#include "../native/filesys.h"
-#include "../native/keyboard.h"
-#include "../native/notify.h"
-#include "../native/os.h"
+#include "../../native/clipboard.h"
+#include "../../native/dialog.h"
+#include "../../native/filesys.h"
+#include "../../native/keyboard.h"
+#include "../../native/notify.h"
+#include "../../native/os.h"
 
-#include "../ui/button.h"
-#include "../ui/contextmenu.h"
-#include "../ui/draw.h"
-#include "../ui/dropdown.h"
-#include "../ui/edit.h"
-#include "../ui/scrollable.h"
-#include "../ui/svg.h"
-#include "../ui/switch.h"
+#include "../../ui/button.h"
+#include "../../ui/contextmenu.h"
+#include "../../ui/draw.h"
+#include "../../ui/dropdown.h"
+#include "../../ui/edit.h"
+#include "../../ui/scrollable.h"
+#include "../../ui/svg.h"
+#include "../../ui/switch.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -648,7 +648,7 @@ button_add_new_device_to_self = {
     .on_mup      = button_add_device_to_self_mdown,
 };
 
-#include "../tox.h"
+#include "../../tox.h"
 static void button_lock_uTox_on_mup(void) {
     if (tox_thread_init && edit_profile_password.length > 3) {
         flist_selectsettings();
@@ -674,9 +674,9 @@ static void button_show_password_settings_on_mup(void) {
 }
 
 
-#include "../chatlog.h"
-#include "../flist.h"
-#include "../friend.h"
+#include "../../chatlog.h"
+#include "../../flist.h"
+#include "../../friend.h"
 static void button_export_chatlog_on_mup(void) {
     FRIEND *f = flist_get_friend();
     if (!f) {
@@ -749,8 +749,8 @@ static void button_qr_on_mright(void) {
     contextmenu_new(COUNTOF(menu), menu, contextmenu_qr_onselect);
 }
 
-#include "../settings.h"
-#include "../av/utox_av.h"
+#include "../../settings.h"
+#include "../../av/utox_av.h"
 static void button_audiopreview_on_mup(void) {
     if (!settings.audio_preview) {
         postmessage_utoxav(UTOXAV_START_AUDIO, 1, 0, NULL);
@@ -1206,7 +1206,7 @@ static void edit_video_fps_onlosefocus(EDIT *UNUSED(edit)) {
     edit_video_fps.length = strnlen((char *)edit_video_fps.data, edit_video_fps.data_size - 1);
 }
 
-#include "../screen_grab.h"
+#include "../../screen_grab.h"
 static void dropdown_video_onselect(uint16_t i, const DROPDOWN *UNUSED(dm)) {
     if (i == 1) {
         utox_screen_grab_desktop(1);
@@ -1234,7 +1234,7 @@ static void dropdown_theme_onselect(const uint16_t i, const DROPDOWN *UNUSED(dm)
     settings.theme = i;
 }
 
-#include"../groups.h"
+#include"../../groups.h"
 static void dropdown_notify_groupchats_onselect(const uint16_t i, const DROPDOWN *UNUSED(dm)) {
     GROUPCHAT *g = flist_get_groupchat();
     if (!g) {

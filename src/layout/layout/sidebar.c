@@ -3,21 +3,21 @@
 #include "settings.h"
 #include "friend.h"
 
-#include "../avatar.h"
-#include "../flist.h"
-#include "../macros.h"
-#include "../self.h"
-#include "../theme.h"
-#include "../tox.h"
+#include "../../avatar.h"
+#include "../../flist.h"
+#include "../../macros.h"
+#include "../../self.h"
+#include "../../theme.h"
+#include "../../tox.h"
 
-#include "../native/ui.h"
+#include "../../native/ui.h"
 
-#include "../ui.h"
-#include "../ui/draw.h"
-#include "../ui/scrollable.h"
-#include "../ui/edit.h"
-#include "../ui/button.h"
-#include "../ui/svg.h"
+#include "../../ui.h"
+#include "../../ui/draw.h"
+#include "../../ui/scrollable.h"
+#include "../../ui/edit.h"
+#include "../../ui/button.h"
+#include "../../ui/svg.h"
 
 #include <string.h>
 
@@ -157,7 +157,7 @@ panel_flist = {
     };
 
 
-#include "../friend.h"
+#include "../../friend.h"
 static void e_search_onchange(EDIT *edit) {
     char *data = edit->data;
     uint16_t length = edit->length > sizeof search_data ? sizeof search_data - 1 : edit->length;

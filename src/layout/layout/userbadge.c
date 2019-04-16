@@ -2,17 +2,17 @@
 
 #include "settings.h"
 
-#include "../avatar.h"
-#include "../flist.h"
-#include "../macros.h"
-#include "../self.h"
-#include "../tox.h"
+#include "../../avatar.h"
+#include "../../flist.h"
+#include "../../macros.h"
+#include "../../self.h"
+#include "../../tox.h"
 
-#include "../native/dialog.h"
+#include "../../native/dialog.h"
 
-#include "../ui/button.h"
-#include "../ui/contextmenu.h"
-#include "../ui/edit.h"
+#include "../../ui/button.h"
+#include "../../ui/contextmenu.h"
+#include "../../ui/edit.h"
 
 /* On-press functions followed by the update functions when needed... */
 static void button_avatar_on_mup(void) {
